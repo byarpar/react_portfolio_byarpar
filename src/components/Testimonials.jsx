@@ -1,61 +1,41 @@
 import { content } from "../Content";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-import { Pagination } from "swiper";
-import { useState } from "react";
 
 const Testimonials = () => {
-  const { Testimonials } = content;
-  const [activeIndex, setActiveIndex] = useState(0);
+  const { testimonials_content, title, subtitle } = content.Testimonials;
+
   return (
     <section>
-      <div className="md:container px-5 pt-14">
+      <div className="md:container px-5 pt-14" id="education">
         <h2 className="title" data-aos="fade-down">
-          {Testimonials.title}
+          {title}
         </h2>
         <h4 className="subtitle" data-aos="fade-down">
-          {Testimonials.subtitle}
+          {subtitle}
         </h4>
-        <br />
-        <Swiper
-          direction={"vertical"}
-          pagination={{
-            clickable: true,
-          }}
-          data-aos="fade-up"
-          loop={true}
-          spaceBetween={40}
-          slidesPerView={1.7}
-          onSlideChange={(e) => {
-            console.log(e.realIndex);
-            setActiveIndex(e.realIndex);
-          }}
-          modules={[Pagination]}
-          className="md:h-96 h-[40rem] max-w-3xl"
-        >
-          {Testimonials.testimonials_content.map((content, i) => (
-            <SwiperSlide key={i}>
-              <div
-                className={` duration-500 bg-bg_light_primary mx-8 border-2 
-              p-8 h-full rounded-2xl flex items-center gap-6
-               border-slate-200 md:flex-row flex-col
-                ${activeIndex !== i && "scale-75 blur-sm"}`}
-              >
-                <img src={content.img} alt="..." className="h-24" />
-                <div>
-                  <p className="sm:text-base text-sm">{content.review}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials_content.map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl p-6 border btn bg-dark_primary text-white"
+              data-aos="fade-up"
+            >
+              <img src={testimonial.img} alt="Avatar" className="h-24 mb-4" />
+              <h1 className="sm:text-base text-sm">{testimonial.reviewss}</h1>
+                <h3 className="sm:text-base text-sm">{testimonial.reviews}</h3>
+                  <p className="sm:text-base text-sm">{testimonial.review}</p>
                   <br />
-                  <h6>{content.name}</h6>
-                </div>
-              </div>
-            </SwiperSlide>
+                  <h6>{testimonial.name}</h6>
+              <button 
+                className="mt-4 text-blue-500 bg-transparent btn bg-dark_primary text-white "
+                onClick={() => window.open(testimonial.certificate_link, "_blank")}
+              >
+                View Certificate
+              </button>
+            </div>
           ))}
-        </Swiper>
+
+          
+        </div>
       </div>
     </section>
   );

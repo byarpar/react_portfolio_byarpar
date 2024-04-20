@@ -1,29 +1,48 @@
 // import images
 import Hero_person from "./assets/images/Hero/person.png";
 
-import figma from "./assets/images/Skills/figma.png";
-import sketch from "./assets/images/Skills/sketch.png";
-import ps from "./assets/images/Skills/ps.png";
+import figma from "./assets/images/Skills/java.png";
+import css from "./assets/images/Skills/css-3.png";
+import html from "./assets/images/Skills/html-5.png";
 import reactjs from "./assets/images/Skills/react.png";
 import nodejs from "./assets/images/Skills/node.png";
-import python from "./assets/images/Skills/python.png";
+import java_script from "./assets/images/Skills/java-script.png";
+import bootstrap from "./assets/images/Skills/bootstrap.png";
+import mysql from "./assets/images/Skills/mysql.png";
+import AxureRP from "./assets/images/Skills/AxureRP.png";
+import SpringBoot from "./assets/images/Skills/SpringBoot.png";
+import eclipse from "./assets/images/Skills/eclipse .png";
+import VisualStudio from "./assets/images/Skills/VisualStudio.png";
+import jQuery from "./assets/images/Skills/jQuery.png";
+import Liferay from "./assets/images/Skills/Liferay.png";
+import sublimetext from "./assets/images/Skills/sublimetext.png";
+import IntelliJIDEA from "./assets/images/Skills/IntelliJIDEA.png";
+import byar from "./assets/images/Skills/byar.png";
+import Figma from "./assets/images/Skills/Figma.png";
 
 import services_logo1 from "./assets/images/Services/logo1.png";
 import services_logo2 from "./assets/images/Services/logo2.png";
-import services_logo3 from "./assets/images/Services/logo3.png";
+
+
 
 import project1 from "./assets/images/projects/img1.png";
 import project2 from "./assets/images/projects/img2.png";
 import project3 from "./assets/images/projects/img3.png";
+import project4 from "./assets/images/projects/img4.png";
+import project5 from "./assets/images/projects/img5.png";
+import project6 from "./assets/images/projects/img6.png";
+import project7 from "./assets/images/projects/img7.png";
+import project8 from "./assets/images/projects/img8.png";
 import person_project from "./assets/images/projects/person.png";
+
+
 
 import avatar1 from "./assets/images/Testimonials/avatar1.png";
 import avatar2 from "./assets/images/Testimonials/avatar2.png";
-import avatar3 from "./assets/images/Testimonials/avatar3.png";
-import avatar4 from "./assets/images/Testimonials/avatar4.png";
+
 
 import Hireme_person from "./assets/images/Hireme/person.png";
-import Hireme_person2 from "./assets/images/Hireme/person2.png";
+
 
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
@@ -31,8 +50,11 @@ import { MdArrowForward, MdCall } from "react-icons/md";
 import { BsInstagram } from "react-icons/bs";
 import { TbSmartHome } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
+import { FaLinkedin } from 'react-icons/fa';
+import { AiFillGithub } from 'react-icons/ai';
 import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
 import { MdOutlinePermContactCalendar } from "react-icons/md";
+import { MdCastForEducation } from "react-icons/md";
 
 export const content = {
   nav: [
@@ -40,14 +62,20 @@ export const content = {
       link: "#home",
       icon: TbSmartHome,
     },
+ 
     {
-      link: "#skills",
+      link: "#Hireme",
       icon: BiUser,
     },
     {
-      link: "#services",
+      link: "#skills",
       icon: RiServiceLine,
     },
+    {
+      link: "#education",
+      icon: MdCastForEducation,
+    },
+  
     {
       link: "#projects",
       icon: RiProjectorLine,
@@ -58,159 +86,278 @@ export const content = {
     },
   ],
   hero: {
-    title: "Web Developer",
-    firstName: "JOHN",
-    LastName: "ALEX",
+    titles: "Byar Par",
+  
+    title: "Web Developer And Designer",
+    
+    
     btnText: "Hire Me",
     image: Hero_person,
     hero_content: [
-      {
-        count: "8+",
-        text: "Years of Experinse in Web development",
-      },
-      {
-        count: "20+",
-        text: "Projects Worked in my career",
-      },
+   
+      
+     
     ],
   },
   skills: {
     title: "Skills",
-    subtitle: "MY TOP SKILLS",
+    subtitle: "Tools,Technical Skills And Soft Skills",
     skills_content: [
       {
-        name: "Figma",
-        para: "Lorem ipsum text  dummy",
+        name: "Java",
+       
         logo: figma,
       },
       {
-        name: "Node js",
-        para: "Lorem ipsum text  dummy",
+        name: "Node",
+        
         logo: nodejs,
       },
       {
-        name: "Adobe Photoshop",
-        para: "Lorem ipsum text  dummy",
-        logo: ps,
+        name: "Html",
+       
+        logo: html,
       },
       {
         name: "React js",
-        para: "Lorem ipsum text  dummy",
+        
         logo: reactjs,
       },
       {
-        name: "Sketch",
-        para: "Lorem ipsum text  dummy",
-        logo: sketch,
+        name: "css",
+       
+        logo: css,
       },
       {
-        name: "Python",
-        para: "Lorem ipsum text  dummy",
-        logo: python,
+        name: "java script",
+       
+        logo: java_script,
       },
+
+      {
+        name: "Bootstrap",
+        
+        logo: bootstrap,
+      },
+
+      {
+        name: "Mysql",
+        
+        logo: mysql,
+      },
+      {
+        name: "AxureRP 10",
+       
+        logo: AxureRP,
+      },
+
+      {
+        name: "SpringBoot",
+        
+        logo: SpringBoot,
+      },
+      {
+        name: "Eclipse",
+      
+        logo: eclipse,
+      },
+      {
+        name: " Visual Studio",
+        
+        logo:  VisualStudio,
+      },
+      {
+        name: "jQuery",
+       
+        logo: jQuery,
+      },
+
+      {
+        name: "Liferay",
+       
+        logo: Liferay,
+      },
+
+      {
+        name: "Sublime text",
+      
+        logo: sublimetext,
+      },
+
+      {
+        name: "IntelliJ IDEA",
+       
+        logo: IntelliJIDEA,
+      },
+      {
+        name: "Android Sudio",
+       
+        logo: byar,
+      },
+      {
+        name: "Figma ",
+       
+        logo: Figma,
+      },
+      
+     
+      
     ],
     icon: MdArrowForward,
   },
-  services: {
-    title: "Services",
-    subtitle: "WHAT I OFFER",
-    service_content: [
-      {
-        title: "Web Development",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo1,
-      },
-      {
-        title: "ui / ux DESIGNING",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo2,
-      },
-      {
-        title: "PhotoShop Editing",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo3,
-      },
-    ],
-  },
   Projects: {
     title: "Projects",
-    subtitle: "MY CREATION",
+    subtitle: "My Projects",
     image: person_project,
     project_content: [
       {
-        title: "Gym Website",
+        title: " Meals on Wheels",
+        titles: " Meals on Wheels project using Java, Spring Boot, Bootstrap, HTML, CSS, and MySQL",
+
         image: project1,
+        codeLink: "https://github.com/byarpar/springboot_meals_on_wheels/tree/main",
+        websiteLink: "https://drive.google.com/file/d/128ytXZ9dOzyFtpUUFGNM6LJAtU9CcnxD/view?usp=sharing",
       },
       {
-        title: "Social Media web",
+        title: "DoBu Material Art",
+        titles: " DoBu Martial Arts project using Java,  Bootstrap, HTML, CSS",
         image: project2,
+        codeLink: "https://github.com/byarpar/DoBu_Material_Art",
+        websiteLink: "https://65f0444bc733a7b30886a86d--delicate-blancmange-afeb21.netlify.app//",
       },
       {
-        title: "Creative Website",
+        title: "In-A-Box",
+        titles: " In a Box  project using Java,  Bootstrap, HTML, CSS",
         image: project3,
+        codeLink: "https://github.com/byarpar/In-A-Box",
+        websiteLink: "https://65efcde36c955e570edd8a29--boisterous-biscotti-87c429.netlify.app/",
+      },
+      {
+        title: "UI-UX",
+        titles: " UI-UX project using AxureRP 10",
+        image: project4,
+        codeLink: "https://github.com/byarpar/UI-UX",
+        websiteLink: "https://drive.google.com/file/d/1dgSKJ-ynHX00QBwD1yMp7NkgQqxMif90/view?usp=sharing",
+      },
+      {
+        title: "Math Quiz",
+        titles: " Math Quiz project using Android Sudio",
+        image: project5,
+        
+        websiteLink: "https://drive.google.com/file/d/1aPJab0jtJj1sx0t7895MPNt8V5M9JswR/view?usp=sharing",
+      },
+      {
+        title: "KnowYourNeighbourHood",
+        titles: " KnowYourNeighbourHood project using Java, Spring Boot, React JS, HTML, CSS, MySQL",
+        image: project6,
+        codeLink: "https://github.com/byarpar/In-A-Box",
+        websiteLink: "https://drive.google.com/file/d/1kVSu_kjU8TbtahV2edsLzpA6j8Q4XM7l/view?usp=sharing",
+      },
+      {
+        title: "xyzCarPortal",
+        titles: " xyzCarPortal project using Java, Spring Boot, React JS, HTML, CSS, MySQL",
+        image: project7,
+        codeLink: "https://github.com/byarpar/springboot_car_portal_demo",
+        websiteLink: "https://drive.google.com/file/d/1-euzhtKbvVlG48l8kqPCqK8pM6AuQfLR/view?usp=sharing",
+      },
+      {
+        title: "Enomy Finance",
+        titles: " Enomy Finance project using Java, Bootstrap, HTML, CSS, MySQL",
+        image: project8,
+        codeLink: "https://github.com/byarpar/Enomy_Finance",
+        websiteLink: "https://drive.google.com/file/d/1qd_07J9pFSqK0-Z3n0LAgvdGn6xRzMVI/view?usp=sharing",
       },
     ],
   },
+  
+  
   Testimonials: {
-    title: "Testimonials",
-    subtitle: "MY CLIENT REVIEWS",
+    title: "Education",
+    subtitle: "MY Education",
     testimonials_content: [
+
+    
       {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
+        reviewss: "LITHAN Educlaas",
+        reviews: "2022 - 2023",
+        review: "Level 3 Foundation Diploma in Information Technology",
         img: avatar1,
-        name: "JOHN DOE",
+       
+        certificate_link: "https://drive.google.com/file/d/1Jb1ESEFU5ZEE2Pr4CMCrVirp_eNBipCi/view?usp=sharing",
       },
+   
       {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
+        reviewss: "Basic Education High School ",
+        reviews: "2016 - 2017",
+        review: "Grade 10",
         img: avatar2,
-        name: "Tom Alex",
+     
+        certificate_link: "https://drive.google.com/file/d/1frPRIT4uM1VgEp4liMW1kOkP2cP_qbHe/view?usp=sharing",
       },
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar3,
-        name: "Johnny",
-      },
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar4,
-        name: "ROBBIN",
-      },
+      
     ],
-  },
+},
+
+
+services: {
+  title: "Expertise",
+  subtitle: "My Expertise",
+  service_content: [
+    {
+      title: "Full Stack Web Development",
+      para: "I enjoy the challenge of creating front-end and back-end solutions to create seamless online experiences.",
+      logo: services_logo1,
+    },
+    {
+      title: "ui / ux DESIGNING",
+      para: "I have experience with Axure RP 10 and prototyping.",
+      logo: services_logo2,
+    },
+  
+  ],
+},
+
   Hireme: {
-    title: "Hire Me",
-    subtitle: "FOR YOUR PROJECTS",
+    title: "About",
+    subtitle: "About Me",
     image1: Hireme_person,
-    image2: Hireme_person2,
-    para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-    btnText: "Hire Me",
+  
+    para: "Byar Par, a 26-year-old student at Educlaas Academy, Lithan College, is passionate about UI/UX design and web development. With a focus on both frontend and backend development.",
+    btnText: "Introduction Video",
   },
   Contact: {
     title: "Contect Me",
     subtitle: "GET IN TOUCH",
     social_media: [
       {
-        text: "codeaprogram@gmail.com",
+        text: "byarpar0@gmail.com",
         icon: GrMail,
-        link: "mailto:codeaprogram@gmail.com",
+        link: "mailto:byarpar0@gmail.com",
       },
       {
-        text: "+91 1234 56778",
+        text: "+95 9770 386642",
         icon: MdCall,
-        link: "https://wa.me/1234567890",
+        link: "https://wa.me/09770386642",
       },
       {
-        text: "codeaprogram",
+        text: "Byar Par",
         icon: BsInstagram,
-        link: "https://www.instagram.com/codeaprogram/",
+        link: "https://www.instagram.com/byar.par/",
+      },
+      {
+        text: "Byar Par - LinkedIn",
+        icon: FaLinkedin,
+        link: "https://www.linkedin.com/in/byar-par/",
+      },
+      {
+        text: "Byar Par - GitHub",
+        icon: AiFillGithub,
+        link: "https://github.com/byarpar/",
       },
     ],
+
   },
   Footer: {
-    text: "All © Copy Right Reserved 2022",
+    text: "All © Copy Right Reserved 2024",
   },
 };

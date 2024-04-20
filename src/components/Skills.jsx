@@ -1,7 +1,5 @@
-// import content
 import { createElement, useState } from "react";
 import { content } from "../Content";
-// import modal package
 import Modal from "react-modal";
 
 const customStyles = {
@@ -36,38 +34,6 @@ const Skills = () => {
 
   return (
     <section className="min-h-fit bg-bg_light_primary" id="skills">
-      {/* modal */}
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        style={customStyles}
-      >
-        <div className="flex items-center gap-2">
-          <img className="h-10" src={selectSkill?.logo} alt="..." />
-          <h6>{selectSkill?.name}</h6>
-        </div>
-        <br />
-        <ul className="list-decimal px-4 font-Poppins sm:text-sm text-xs !leading-7">
-          <li>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-          <li>Lorem ipsum dolor sit, ame.</li>
-          <li>Lorem ipsum dolor sit, amet consectetur</li>
-          <li>
-            Lorem ipsum dolor sit, amet dolor sit, amet consectetur adipisicing.
-          </li>
-          <li>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad est
-            beatae quos rem.
-          </li>
-        </ul>
-        <br />
-        <div className="flex justify-end">
-          <button onClick={closeModal} className="btn">
-            Close
-          </button>
-        </div>
-      </Modal>
-
-      {/* content */}
       <div className="md:container px-5  py-14">
         <h2 className="title" data-aos="fade-down">
           {skills.title}
@@ -84,30 +50,72 @@ const Skills = () => {
               data-aos-delay={i * 400}
               className="bg-white sm:cursor-pointer 
                relative group w-full flex items-center
-                gap-5 p-5 max-w-sm rounded-md border-2 border-slate-200"
+                gap-5 p-5 max-w-sm rounded-md border-2 border-slate-200 btn bg-dark_primary text-white"
             >
               <div>
-                <img
-                  src={skill.logo}
-                  alt="..."
-                  className="w-10 group-hover:scale-125 duration-200"
-                />
+                {skill.logo ? (
+                  <img
+                    src={skill.logo}
+                    alt="..."
+                    className="w-10 group-hover:scale-125 duration-200"
+                  />
+                ) : (
+                  <span>{skill.name}</span>
+                )}
               </div>
               <div>
                 <h6>{skill.name}</h6>
                 <p className="italic">{skill.para}</p>
-                <div
-                  onClick={() => {
-                    setSelectSkill(skill);
-                    openModal();
-                  }}
-                  className="text-xl absolute top-3 right-3"
-                >
-                  {createElement(skills.icon)}
-                </div>
               </div>
             </div>
           ))}
+          {/* Adding Soft Skills */}
+          <div className="w-full text-center mt-8">
+            <h3 className="text-xl font-bold">Soft Skills</h3>
+          </div>
+          <div
+            className="bg-white sm:cursor-pointer 
+               relative group w-full flex items-center
+                gap-5 p-5 max-w-sm rounded-md border-2 border-slate-200 btn bg-dark_primary text-white"
+            data-aos="fade-up"
+            data-aos-delay={skills.skills_content.length * 400}
+          >
+            
+            <div>
+              <h6>Communication</h6>
+             
+            </div>
+          </div>
+          
+          <div
+            className="bg-white sm:cursor-pointer 
+               relative group w-full flex items-center
+                gap-5 p-5 max-w-sm rounded-md border-2 border-slate-200 btn bg-dark_primary text-white"
+            data-aos="fade-up"
+            data-aos-delay={skills.skills_content.length * 400 + 800}
+          >
+           
+            <div>
+              <h6>Problem Solving</h6>
+             
+            </div>
+          </div>
+          <div
+            className="bg-white sm:cursor-pointer 
+               relative group w-full flex items-center
+                gap-5 p-5 max-w-sm rounded-md border-2 border-slate-200 btn bg-dark_primary text-white"
+            data-aos="fade-up"
+            data-aos-delay={skills.skills_content.length * 400 + 1200}
+          >
+            
+            <div>
+              <h6>Decision Making</h6>
+             
+            </div>
+          </div>
+         
+          
+          {/* End of Soft Skills */}
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
-// import content
 import { useEffect } from "react";
 import { content } from "../Content";
+
 const Hero = () => {
   const { hero } = content;
 
@@ -20,10 +20,21 @@ const Hero = () => {
 
         {/* first col */}
         <div className="pb-16 px-6 pt-5" data-aos="fade-down">
+          <h1>{hero.titles}</h1>
+          <br />
           <h2>{hero.title}</h2>
           <br />
           <div className="flex justify-end">
             <button className="btn">{hero.btnText}</button>
+            {/* Download CV button */}
+            <a
+              href="https://drive.google.com/file/d/1_aDRdtqnI_Nr2HaUaIWZVKi6nzqTZnRb/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn bg-dark_primary text-white ml-3"
+            >
+              Download CV
+            </a>
           </div>
           <div className="flex flex-col gap-10 mt-10">
             {hero.hero_content.map((content, i) => (
