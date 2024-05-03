@@ -7,6 +7,7 @@ module.exports = {
       Paprika: "Paprika",
       Inria: "Inria Serif",
     },
+    
     container: {
       center: true,
       padding: "4rem",
