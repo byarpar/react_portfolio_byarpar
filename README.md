@@ -5,6 +5,7 @@
 ```bash 
 npm i
 npm run dev
+```
 
-
-## How
+## live preview link
+[See Now](https://byarpar.netlify.app/)
