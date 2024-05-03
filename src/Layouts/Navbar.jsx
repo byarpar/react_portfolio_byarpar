@@ -2,6 +2,7 @@ import { useState } from "react";
 import { content } from "../Content";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { createElement } from "react";
+import './Navbar.css'
 
 const Navbar = () => {
   const { nav } = content;
@@ -9,30 +10,30 @@ const Navbar = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <div className="w-full flex justify-center">
+    <div className="wrapper w-full flex justify-center">
       <div
-        className="sm:cursor-pointer fixed top-5 left-10 z-[999] rounded-lg bg-white/40 p-2"
+        className="sm:cursor-pointer fixed top-5 left-1 z-[999] rounded-lg bg-white/40 p-3 top-2 "
         onClick={() => setShowMenu(!showMenu)}
       >
         <HiMenuAlt2 size={34} />
       </div>
       <nav
-        className={`fixed z-[999] flex items-center justify-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300 ${
-          showMenu ? "top-20" : "-top-full"
+        className={`fixed  z-[999] flex items-center  gap-30 bg-slate-200/60 px-63 py-5 backdrop-blur-md rounded-full   ${
+          showMenu ? "top-14" : "-top-20"
         }`}
-        style={{ width: "35%", maxWidth: "1200px" }} // Centering and sizing the navigation bar
       >
-        {nav.map((item, i) => (
+        {nav.map((item, index) => (
           <a
-            key={i}
-            href={item.link}
-            onClick={() => setActive(i)}
-            className={`text-xl p-3 rounded-full sm:cursor-pointer ${
-              i === active && "bg-dark_primary text-white"
-            }`}
-            style={{ marginRight: "20px" }} // Adding margin between each navigation item
+            key={index}
+            href={item.link} // Added href attribute here
+            className={`icon  ${item.tooltip.toLowerCase()} ${active === index ? 'active' : ''}`}
+            onClick={() => setActive(index)}
           >
-            {createElement(item.icon)}
+
+            <div className="tooltip ">{item.tooltip}</div>
+             
+                {createElement(item.icon, {size: 24})} {/* Render the icon using createElement */}
+              
           </a>
         ))}
       </nav>

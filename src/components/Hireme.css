@@ -1,0 +1,19 @@
+@keyframes borderGrow {
+    0% {
+      border-width: 2px;
+      border-color: rgb(0, 1, 5); /* Initial border color */
+    }
+    50% {
+      border-width: 2px;
+      border-color: rgb(7, 69, 226); /* Midway border color */
+    }
+    100% {
+      border-width: 2px;
+      border-color: rgb(121, 2, 2); /* Final border color */
+    }
+  }
+  
+  .border-animation {
+    animation: borderGrow 1.5s infinite;
+  }
+  

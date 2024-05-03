@@ -5,8 +5,8 @@ const Testimonials = () => {
 
   return (
     <section>
-      <div className="md:container px-5 pt-14" id="education">
-        <h2 className="title" data-aos="fade-down">
+       <div className="md:container px-5 pt-14" id="education">
+       <h2 className="title" data-aos="fade-down">
           {title}
         </h2>
         <h4 className="subtitle" data-aos="fade-down">
@@ -16,25 +16,36 @@ const Testimonials = () => {
           {testimonials_content.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 border btn bg-dark_primary text-white"
+              className="bg-white rounded-xl shadow-xl p-6 border btn bg-dark_primary text-white flex flex-col  border-animation"
               data-aos="fade-up"
             >
-              <img src={testimonial.img} alt="Avatar" className="h-24 mb-4" />
-              <h1 className="sm:text-base text-sm">{testimonial.reviewss}</h1>
-                <h3 className="sm:text-base text-sm">{testimonial.reviews}</h3>
-                  <p className="sm:text-base text-sm">{testimonial.review}</p>
-                  <br />
-                  <h6>{testimonial.name}</h6>
-              <button 
-                className="mt-4 text-blue-500 bg-transparent btn bg-dark_primary text-white "
-                onClick={() => window.open(testimonial.certificate_link, "_blank")}
-              >
-                View Certificate
-              </button>
+             
+             <div className="mx-auto">
+                <img
+                  src={testimonial.img}
+                  alt="Avatar"
+                  className="w-full h-full object-cover"
+                />
+                
+              </div>
+              <div className="flex flex-col justify-between flex-grow">
+                <div>
+                  <h6 className="font-bold mb-1">{testimonial.name}</h6>
+                  <h1 className="sm:text-base text-sm">{testimonial.reviewss}</h1>
+                  <p className="text-sm mb-4">{testimonial.review}</p>
+                </div>
+                <div className="text-sm text-gray-600">
+                  <p>{testimonial.reviews}</p>
+                  <button
+                    className="mt-2 text-blue-500 bg-transparent btn bg-dark_primary text-white button"
+                    onClick={() => window.open(testimonial.certificate_link, "_blank")}
+                  >
+                    View Certificate
+                  </button>
+                </div>
+              </div>
             </div>
           ))}
-
-          
         </div>
       </div>
     </section>
@@ -42,3 +53,5 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
+

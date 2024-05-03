@@ -14,24 +14,25 @@ const Hero = () => {
         >
           <h1 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
             {hero.firstName}{" "}
-            <span className="text-dark_primary">{hero.LastName}</span>
+            <span className="text-dark_primary  ">{hero.LastName}</span>
           </h1>
         </div>
 
         {/* first col */}
-        <div className="pb-16 px-6 pt-5" data-aos="fade-down">
+        <div className="pb-16 px-6 pt-5 " data-aos="fade-down">
           <h1>{hero.titles}</h1>
           <br />
           <h2>{hero.title}</h2>
           <br />
-          <div className="flex justify-end">
-            <button className="btn">{hero.btnText}</button>
+          <div className="flex justify-end  ">
+            <button className="btn button">{hero.btnText}</button>  
+            
             {/* Download CV button */}
             <a
-              href="https://drive.google.com/file/d/1_aDRdtqnI_Nr2HaUaIWZVKi6nzqTZnRb/view?usp=sharing"
+              href="https://drive.google.com/file/d/12RS14PJkDoL07vmJ0CKyNjp-CH7idU6L/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn bg-dark_primary text-white ml-3"
+              className="btn bg-dark_primary text-white ml-3 button"
             >
               Download CV
             </a>
